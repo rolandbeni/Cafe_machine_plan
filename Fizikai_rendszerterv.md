@@ -12,7 +12,7 @@ Automata : Hely leírás
 Automata : Utolsó Feltöltés Dátuma
 
 
-Automata --|> Eladott_Kávé
+Automata --|> Eladott_Kávé: 1:1
 
 object Eladott_Kávé {
 AutomatId 
@@ -24,3 +24,48 @@ Haszon
 }
 @enduml
 ```
+## Osztálydiagramm:
+```
+@startuml
+
+class Kaveautomata {
+  + kaveVasarlas(tipus: str, penz: int): bool
+  + visszajaroKerese(): int
+  + jelzesKuldese(): void
+  + getHaszon(): int
+}
+
+Kaveautomata -- Kave
+
+class Kave {
+  - tipus: str
+  - ar: int
+}
+
+@enduml
+```
+## Állapotgép: 
+```
+@startuml
+
+state FeltoltesAlatt{
+  [*] --> FeltoltesVege
+  FeltoltesVege--> Uzemkesz
+}
+
+state Uzemkesz {
+  [*] --> Kivalasztas
+  Kivalasztas --> PenzEllenorzes
+  PenzEllenorzes -->  KaveKeszites
+  KaveKeszites -->  KaveKiadas
+  KaveKiadas --> VisszajaroKiadas
+  VisszajaroKiadas --> Kivalasztas
+  Kivalasztas -->  JelzesKuldese
+  JelzesKuldese-->  FeltoltesAlatt
+  
+}
+
+@enduml
+```
+
+
