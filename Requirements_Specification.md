@@ -8,7 +8,7 @@ Fontos, hogy az automata jelezze, hogy mikor kell újra feltölteni, és hogy mi
 ## Követelmények: 
 Az autómatának tundnia kell, 20, 50, 100, és 200 Forintos érméket elfogadni, és gombnyomásra az érméket visszadobni.
 Csak akkor adhatja ki a kávét, ha már elegendő pénz be lett dobva, és a vásárlás végén visszaadni pontosan a visszajárót.
-Az automatának jeleznie kell a szolgáltató cég felé, ha a készlet a teljes készlet 30%-a alá esett.
+Az automatának jeleznie kell a szolgáltató cég felé, ha a készlet a maximum készlet 30%-a alá esett.
 Fontos, hogy az eladott kávén szerzett hasznot is ki tudja számítani.
 
 ```
