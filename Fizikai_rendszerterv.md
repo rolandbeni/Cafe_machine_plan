@@ -67,5 +67,18 @@ state Uzemkesz {
 
 @enduml
 ```
+## Kommunikációs API Leírás:
 
+- **Vásárlás API:**
+  - POST /vasarlas
+    - Input: {AutomataID, Kave, tej, cukor}
+    - Output: {Siker, Visszajaro}
+
+- **Készlet API:**
+  - GET /keszlet/{AutomataID}
+    - Output: { KaveMennyiseg, TejMennyiseg, CukorMennyiseg }
+
+- **Haszon Lekérdezés API:**
+  - GET /haszon
+    - Output: { OsszHaszon }
 
